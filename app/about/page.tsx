@@ -1,0 +1,2 @@
+import {StaticPage} from "@/components/static-page";
+export default function Page(){return <StaticPage title="About Us"><p>We help visitors discover new mobile applications, referral promotions, and reward offers in one simple, fast-loading directory.</p><p>Our team regularly reviews and updates listings, but all third-party offers remain subject to their respective providers&apos; terms.</p></StaticPage>}

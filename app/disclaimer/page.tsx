@@ -1,0 +1,2 @@
+import {StaticPage} from "@/components/static-page";
+export default function Page(){return <StaticPage title="Disclaimer"><p>We do not own, operate, or guarantee any third-party app listed on this website. Download links may be affiliate links, and we may receive a commission when users complete eligible actions.</p><p>Please independently verify every app and offer before participating.</p></StaticPage>}

@@ -1,0 +1,118 @@
+{
+  "settings": {
+    "siteName": "All App Rewards",
+    "logoUrl": "/reward-logo.svg",
+    "telegramUrl": "https://t.me/",
+    "heroTitle": "Latest Apps & Referral Rewards",
+    "heroText": "Discover trending mobile apps, games, referral offers, and exciting rewards in one place. We regularly publish new and verified app promotions with fast access and a smooth mobile-friendly experience.",
+    "collectionTitle": "Latest Apps & Games Collection"
+  },
+  "categories": [
+    {
+      "title": "All Reward Apps",
+      "slug": "rewards"
+    },
+    {
+      "title": "Other Apps",
+      "slug": "other"
+    }
+  ],
+  "apps": [
+    {
+      "name": "Reward Rummy",
+      "slug": "reward-rummy",
+      "iconUrl": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Lucky Slots",
+      "slug": "lucky-slots",
+      "iconUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Spin Winner",
+      "slug": "spin-winner",
+      "iconUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Bonus Arcade",
+      "slug": "bonus-arcade",
+      "iconUrl": "https://images.unsplash.com/photo-1580327344181-c1163234e5a0?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Daily Rewards",
+      "slug": "daily-rewards",
+      "iconUrl": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Mega Club",
+      "slug": "mega-club",
+      "iconUrl": "https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Joy Games",
+      "slug": "joy-games",
+      "iconUrl": "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Cash Spin",
+      "slug": "cash-spin",
+      "iconUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Play & Win",
+      "slug": "play-and-win",
+      "iconUrl": "https://images.unsplash.com/photo-1611996575749-79a3a250f948?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "rewards"
+    },
+    {
+      "name": "Referral Plus",
+      "slug": "referral-plus",
+      "iconUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "other"
+    },
+    {
+      "name": "Bonus 777",
+      "slug": "bonus-777",
+      "iconUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Welcome Bonus Upto ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "other"
+    },
+    {
+      "name": "Reward Zone",
+      "slug": "reward-zone",
+      "iconUrl": "https://images.unsplash.com/photo-1580327344181-c1163234e5a0?auto=format&fit=crop&w=160&h=160&q=80",
+      "offer": "Bonus Upto ₹500 | Min ₹100",
+      "affiliateUrl": "https://example.com",
+      "category": "other"
+    }
+  ]
+}
