@@ -189,6 +189,28 @@ body {
 .app-list {
   background: #fff;
 }
+.scroll-loader {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #74159a;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 13px;
+}
+.scroll-loader span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8f20b5;
+  animation: loader-bounce .9s ease-in-out infinite alternate;
+}
+.scroll-loader span:nth-child(2) { animation-delay: .15s; }
+.scroll-loader span:nth-child(3) { animation-delay: .3s; }
+@keyframes loader-bounce {
+  to { transform: translateY(-7px); background: #d440de; }
+}
 .app-row {
   min-height: 92px;
   display: flex;
@@ -588,6 +610,7 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
   .animated-background span,
+  .scroll-loader span,
   .share-big,
   .share-big::before,
   .floating-telegram,

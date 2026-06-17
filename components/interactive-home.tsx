@@ -1,8 +1,10 @@
 "use client";
 
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import {Download, Gift, Menu, Share2, X} from "lucide-react";
 import {AppItem, Category, SiteSettings} from "@/lib/types";
+
+const APP_BATCH_SIZE = 20;
 
 function TelegramIcon() {
   return (
@@ -15,7 +17,32 @@ function TelegramIcon() {
 export function InteractiveHome({settings, categories, apps}: {settings: SiteSettings; categories: Category[]; apps: AppItem[]}) {
   const [active, setActive] = useState(categories[0]?.slug || "");
   const [menuOpen, setMenuOpen] = useState(false);
-  const visibleApps = useMemo(() => apps.filter(app => app.category === active), [active, apps]);
+  const [visibleCount, setVisibleCount] = useState(APP_BATCH_SIZE);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+  const categoryApps = useMemo(() => apps.filter(app => app.category === active), [active, apps]);
+  const visibleApps = useMemo(() => categoryApps.slice(0, visibleCount), [categoryApps, visibleCount]);
+  const hasMoreApps = visibleCount < categoryApps.length;
+
+  useEffect(() => {
+    setVisibleCount(APP_BATCH_SIZE);
+  }, [active]);
+
+  useEffect(() => {
+    const sentinel = loadMoreRef.current;
+    if (!sentinel || !hasMoreApps) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount(count => Math.min(count + APP_BATCH_SIZE, categoryApps.length));
+        }
+      },
+      {rootMargin: "400px 0px"},
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [categoryApps.length, hasMoreApps]);
   const share = async () => {
     if (navigator.share) await navigator.share({title: settings.siteName, url: location.href});
     else await navigator.clipboard.writeText(location.href);
@@ -57,6 +84,12 @@ export function InteractiveHome({settings, categories, apps}: {settings: SiteSet
               <a className="download" href={`/api/go/${app.slug}`} target="_blank" rel="nofollow sponsored"><Download /> Download</a>
             </article>
           ))}
+          {hasMoreApps && (
+            <div className="scroll-loader" ref={loadMoreRef} role="status" aria-label="Loading more apps">
+              <span /><span /><span />
+              <strong>Loading more apps</strong>
+            </div>
+          )}
         </section>
         <section className="seo-content">
           <h2>Discover Trending Apps & Mobile Rewards</h2>
