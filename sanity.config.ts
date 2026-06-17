@@ -8,6 +8,7 @@ import {schemaTypes} from "./sanity/schemaTypes";
 export default defineConfig({
   name: "default",
   title: "Affiliate App Admin",
+  basePath: "/studio",
   projectId: projectId || "demo",
   dataset,
   plugins: [structureTool(), visionTool()],

@@ -18,11 +18,21 @@ export async function getHomeData(): Promise<HomeData> {
   try {
     const [settings, categories, apps] = await Promise.all([
       client.fetch(`*[_type == "siteSettings"][0]{
-        siteName, logoUrl, telegramUrl, heroTitle, heroText, collectionTitle
+        siteName,
+        "logoUrl": coalesce(logo.asset->url, logoUrl),
+        telegramUrl,
+        heroTitle,
+        heroText,
+        collectionTitle
       }`),
       client.fetch(`*[_type == "category"] | order(order asc){title, "slug": slug.current}`),
       client.fetch(`*[_type == "app" && active == true] | order(order asc){
-        name, "slug": slug.current, iconUrl, offer, affiliateUrl, "category": category->slug.current
+        name,
+        "slug": slug.current,
+        "iconUrl": coalesce(icon.asset->url, iconUrl),
+        offer,
+        affiliateUrl,
+        "category": category->slug.current
       }`),
     ]);
     return {

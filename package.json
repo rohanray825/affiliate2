@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "sanity:seed": "node scripts/seed-sanity.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
